@@ -717,5 +717,18 @@ footer{
         padding: 40px;
     }
 
+    .shape{
+        display: none;
+    }
+
+    
+    #personal-logo{
+        width:100px;
+        height: 100px;
+    }
+    
+    .section__title{
+        font-size: 36px;
+    }
 
 }
