@@ -1,6 +1,3 @@
-//template_pbcrm0r
-//service_965b7im
-//user_xCtwFxrwN9qztgVoznqK
 let isModalOpen = false;
 let contrastToggle = false;
 const scaleFactor = 1/20;
