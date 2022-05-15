@@ -253,6 +253,7 @@ nav,
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 20;
 }
 
 .scroll__icon:after{
@@ -504,10 +505,12 @@ nav{
 
 */
 
+
 .section__title{
     text-align: center;
     font-size: 48px;
     margin-bottom: 60px;
+    z-index: 10;
 }
 
 .project__img{
