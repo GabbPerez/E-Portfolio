@@ -1,3 +1,6 @@
+// index.js - Properly formatted
+import env from './config.js';
+
 let isModalOpen = false;
 let contrastToggle = false;
 const scaleFactor = 1 / 20;
@@ -30,12 +33,13 @@ function contact(event) {
   const loading = document.querySelector(".modal__overlay--loading");
   const success = document.querySelector(".modal__overlay--success");
   loading.classList += " modal__overlay--visible";
+  
   emailjs
     .sendForm(
-      "service_965b7im",
-      "template_pbcrm0r",
+      env.EMAILJS_SERVICE_ID || "service_965b7im",
+      env.EMAILJS_TEMPLATE_ID || "template_pbcrm0r",
       event.target,
-      "user_xCtwFxrwN9qztgVoznqKh"
+      env.EMAILJS_USER_ID || "user_xCtwFxrwN9qztgVoznqKh"
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
@@ -57,3 +61,9 @@ function toggleModal() {
   isModalOpen = true;
   document.body.classList += " modal--open";
 }
+
+// Make functions available globally when using modules
+window.moveBackground = moveBackground;
+window.toggleContrast = toggleContrast;
+window.contact = contact;
+window.toggleModal = toggleModal;
